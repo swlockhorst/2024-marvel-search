@@ -1,0 +1,101 @@
+
+Fraser Boag
+Home
+Notes
+My preferred CSS reset (Sass and SCSS syntax)
+Back to all notes
+Archive
+22nd November '19
+First things first, credit where it's due. This reset is heavily inspired by Eric Meyer's CSS reset. A couple of years ago I directly converted it to Sass so I could bundle it with the rest of my styles, and have added a few rules of my own over time.
+
+Other than the usual "set everything to zero" stuff you'd expect from a full reset, there are a couple of little additions I've dropped in to neutralise some browser quirks - for example setting box-sizing: border-box on everything, and forcing some defaults for text-rendering, -webkit-font-smoothing and text-size-adjust. Your mileage may vary with this stuff, but I find myself using these settings in almost every project.
+
+Sass reset
+Yes, I'm one of those lunatics who likes pure Sass syntax (note from future Fraser - I am no longer one of those lunatics). Don't worry, an SCSS/CSS version is just below.
+
+*, *:before, *:after
+  box-sizing: border-box
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  text-size-adjust: none
+
+footer, header, nav, section, main
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+input
+  -webkit-appearance: none
+  border-radius: 0
+SCSS (CSS) reset
+Same as above, but this time with brackets and semi-colons - compliant to CSS and SCSS syntax.
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+  display: block;
+}
+
+body{
+  line-height: 1;
+}
+
+ol, ul{
+  list-style: none;
+}
+
+blockquote, q{
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+  content: '';
+  content: none;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
